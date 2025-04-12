@@ -35,7 +35,7 @@ jobs:
         with:
           tag_name: ${{ steps.get_version.outputs.VERSION }}
           release_name: Release v${{ steps.get_version.outputs.VERSION }}
-          body: "${{ github.event.head_commit.message }}"
+          body: "${{ github.event.head_commit.message }}\n\n# Steps to install\n1. Drop sidebar.blueprint into your pterodactyl root folder (This is usually /var/www/pterodactyl/)\n2. Run `blueprint -i sidebar` in the terminal"
           draft: false
           prerelease: false
           
