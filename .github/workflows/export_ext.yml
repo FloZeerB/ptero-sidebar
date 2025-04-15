@@ -23,9 +23,9 @@ jobs:
           echo "Detected version: $VERSION"
           echo "::set-output name=VERSION::$VERSION"
 
-      - name: Create zip of project files
-        run: |
-          zip -r sidebar.blueprint . -x "*.git*"
+      - name: Blueprint Build
+        id: blueprint_build
+        uses: zephrynis/blueprint-build@v0.1
 
       - name: Create Release
         id: create_release
@@ -43,7 +43,7 @@ jobs:
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: sidebar.blueprint
-          asset_name: sidebar.blueprint
+          file: ${{ steps.blueprint_build.outputs.FILE }}
+          asset_name: ${{ steps.blueprint_build.outputs.FILE }}
           tag: ${{ steps.get_version.outputs.VERSION }}
           overwrite: true
