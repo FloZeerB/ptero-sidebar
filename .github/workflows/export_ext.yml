@@ -25,7 +25,7 @@ jobs:
 
       - name: Blueprint Build
         id: blueprint_build
-        uses: zephrynis/blueprint-build@v0.1
+        uses: zephrynis/blueprint-build@v0.2
 
       - name: Create Release
         id: create_release
