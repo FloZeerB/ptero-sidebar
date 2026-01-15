@@ -1,9 +1,9 @@
 info:
   name: "Sidebar"
   identifier: "sidebar"
-  description: "A basic sidebar"
+  description: "A basic sidebar with server controls"
   flags: ""
-  version: "1.0"
+  version: "1.1"
   target: "beta-2024-12"
   author: "Zephrynis"
   icon: "public/icon.png"
@@ -15,14 +15,14 @@ admin:
   css: ""
   wrapper: ""
 
-dashboard:
+dashboard: 
   css: "root.css"
   wrapper: ""
-  components: ""
+  components: "public/ServerControls.js"
 
 data:
   directory: ""
-  public: ""
+  public: "public"
   console: ""
 
 requests:
