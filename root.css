@@ -1,4 +1,4 @@
-.App___StyledDiv-sc-2l91w7-0.fnfeQw {
+. App___StyledDiv-sc-2l91w7-0.fnfeQw {
   display: flex;
   flex-wrap: wrap;
 }
@@ -25,7 +25,7 @@
   order: -1;
 }
 
-.jZPsWO > div > a:not(:first-of-type) {
+.jZPsWO > div > a:not(: first-of-type) {
   margin-left: 0 !important;
 }
 
@@ -45,4 +45,39 @@
 .WebsocketHandler___StyledDiv-sc-s2kfyl-0.hKWSwf {
   width: 100%;
   order: -3;
+}
+
+/* ========== NOUVEAUX STYLES POUR LES CONTRÔLES ========== */
+
+#server-status-controls {
+  background:  rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(-10px); 
+  }
+  to { 
+    opacity:  1; 
+    transform:  translateY(0); 
+  }
+}
+
+.server-status {
+  user-select: none;
+}
+
+.status-badge {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.control-btn: active: not(:disabled) {
+  transform: scale(0.95) !important;
 }
